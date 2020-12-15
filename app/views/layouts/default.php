@@ -11,8 +11,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin="anonymous">
 
+  <link rel="stylesheet" href="/public/styles/default.css">
+  <link rel="stylesheet" href="/public/styles/mediaDefault.css">
+  <link rel="stylesheet" href="/public/styles/mediaMain.css">
+
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.js" crossorigin="anonymous"></script>
+
   <title>Главная</title>
   <style>
     /* div.menu-top { */
@@ -20,109 +25,20 @@
     /* width: 90%; */
     /* align-items: center; */
     /* } */
-    .nav a,
-    body,
-    a {
-      color: blueviolet;
-
-    }
-ul li a {
-  font-size: 18px;
-}
-    footer {
-      position: fixed;
-      bottom: 0;
-      width: 100%;
-      border: 1px solid grey;
-    }
-
-    .sub-menu {
-      opacity: 0;
-      visibility: hidden;
-      /* transform: scaleY(0); */
-      position: absolute;
-      /* z-index: 999; */
-      top: 100%;
-      left: auto;
-      width: 600px;
-      transition: all 0.5s 0s;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      background-color: white;
-    }
-
-    ul.nav li.catalogue:hover .sub-menu {
-      opacity: 1;
-      visibility: visible;
-      /* transform: scaleY(1); */
-      z-index: 999;
-    }
-
-    form {
-      margin: 15px;
-    }
-
-    button.close {
-      top: 20%;
-      right: 3%;
-    }
-
-    .wrapper {
-      display: flex;
-      flex-direction: column;
-      min-height: 100%;
-    }
-
-    /* .content {
-      flex: 1 0 auto;
-    } */
-
-    .footer {
-      flex: 0 0 auto;
-      background-color: #A14882;
-      color: white;
-    }
-
-    .footer-contact ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    .footer-contact p {
-    font-weight: bold;
-    margin-top: 10px;
-    font-size: 22px;
-    }
   </style>
 </head>
 
 <body>
-  <ul class="nav navbar-light justify-content-around align-items-center " style="background-color: #eeee;">
+  <!-- раскрытое меню -->
+  <ul class="nav navbar-light  align-items-center top-menu" style="background-color: #eeee;">
     <li class="nav-item">
       <a class="navbar-brand" href="/">
-        <img src="/public/images/layout/logo.png" alt="" height="70px" alt="" loading="lazy">
+        <img src="/public/images/layout/logo.png"  alt="" loading="lazy" class="logoTop">
       </a>
     </li>
-    <li class="nav-item catalogue position-relative" style="height: 100%;">
+    <li class="nav-item catalogue" style="height: 100%;">
       <a class="nav-link" href="/catalogue">Каталог</a>
-      <!-- <ul class='sub-menu text-decoration-none d-flex flex-wrap list-categories'>
-        <?php //foreach //($data as $product) : 
-        ?>
-          <li>
-            <div class="card" style="width: 300px;">
-              <a href="" class="list-categories-select" data-path="<?= $product['path']; ?>">
-                <img style="width: 40px;padding-top: 10px" class="mx-auto d-block rounded" src=" <?= $product['image']; ?>" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <p class="card-text">  //$product['name']; </p>
-                  <span id="catalogue_id" hidden> //$product['id']; </span>
-                </div>
-              </a>
-            </div>
-          </li>
-        <?php //endforeach; 
-        ?>
-      </ul> -->
+
     </li>
 
     <li class="nav-item">
@@ -184,6 +100,7 @@ ul li a {
 
 
 
+
   <!-- Button trigger modal -->
   <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
     Launch static backdrop modal
@@ -228,7 +145,7 @@ ul li a {
                 <div class="col-sm-8">
                   <input type="password" class="form-control" id="inputPasswordEnter" name="passwordEnter" pattern="^(?=.*[a-z])(?=.*[0-9])(?=.*[^\w\s]).{4,15}" required>
                   <div class="invalid-feedback invalid-password-enter">
-                        
+
                   </div>
                   <p class="feedbackPasswordEnter text-danger ">
 
@@ -388,7 +305,6 @@ ul li a {
 </body>
 
 </html>
-
 
 
 

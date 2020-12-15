@@ -21,8 +21,10 @@ class Main extends Model {
    public function getProductSale()
    {
       $res_query = $this->db->query("SELECT * FROM `products` WHERE `discount` IS NOT NULL");
-      $count_cart = $this->db->query("SELECT COUNT(*) as `count` FROM `cart` WHERE `client_id` = {$_SESSION['auth']['id']}");
-       $res_query[] = $count_cart;
+      if (isset($_SESSION['auth'])) {
+          $count_cart = $this->db->query("SELECT COUNT(*) as `count` FROM `cart` WHERE `client_id` = {$_SESSION['auth']['id']}");
+            $res_query[] = $count_cart;
+      }
       return $res_query;
    }
    

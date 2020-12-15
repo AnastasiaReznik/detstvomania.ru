@@ -37,4 +37,41 @@ class Catalogue extends Model
         return $this->db->queryAll('products', 'id', $productId);
     }
 
+    public function doSort($typeSort,$catId) {
+    // $product_sale =  $this->getProductSale();
+    // foreach ($product_sale as $key => $product) {
+    //         $product_sale[$key]['total_price'] = $product['price'] - (($product['price'] * $product['discount'])/100);
+    //         $this->db->query('');
+    // } 
+    // return $product_sale;
+    // {
+           
+           $products = $this->getProducts($catId);
+            foreach ($products as $key => $product) {
+                if (is_int($key)) {
+                $id_product = $product['id'];
+                if ($product['discount'] > 1) {
+                    $productsPrice = $product['price'] - (($product['price'] * $product['discount']) / 100);
+                    $this->db->query("UPDATE products SET `total_price` = $productsPrice WHERE `id` =  $id_product"); //UPDATE cart SET `count` = (`count`+ $count) WHERE `product_id` = $id_product AND `client_id` = $id_user
+                } else {
+                    $productsPrice = $product['price'];
+                    $this->db->query("UPDATE products SET `total_price` = $productsPrice WHERE `id` =  $id_product");
+                }
+
+                }
+              
+            }
+
+        $query = "SELECT * FROM `products` WHERE `id_catalogue` = $catId";
+        if ($typeSort == 'asc') {
+            $query .= " ORDER BY `total_price` ASC";
+        } else {
+            $query .= " ORDER BY `total_price` DESC";
+        }
+        return $this->db->query($query);
+    // }
+        // return $res_query;
+    }
+
+
 }

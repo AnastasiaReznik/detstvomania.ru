@@ -1,6 +1,6 @@
 <!-- Modal окно- просмотра товара-->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-backdrop="static" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+    <div class="modal-dialog modal-lg ">
         <div class="modal-content">
             <div class="modal-header">
                 <h1 class="modal-title modal-name-product" id="exampleModalLabel"> </h1>
@@ -12,8 +12,8 @@
 
             </div>
             <div class="modal-body d-flex">
-                <img src="" alt="" class='modal-image-product' style="width: 300px;"></>
-                <div>
+                <img src="" alt="" class='modal-image-product' >
+                <div class="contentModal">
                     <h4>Цена:
                         <span class="modal-new-price-product"></span> P
                         <span class="modal-old-price-product " style="text-decoration: line-through; text-decoration-color: grey"></span>

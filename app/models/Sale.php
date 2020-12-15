@@ -1,7 +1,7 @@
 <?php
 namespace app\models;
 use app\core\Model;
-//модель личной страницы
+
 class Sale extends Model {
 
     public function getProductSale()

@@ -70,10 +70,10 @@ return [
         'controller' => 'sale',
         'action' => 'index'
     ],
-    // 'sale/sort' => [
-    //     'controller' => 'sale',
-    //     'action' => 'sort'
-    // ],
+    'catalogue/sort' => [
+        'controller' => 'catalogue',
+        'action' => 'sort'
+    ],
     
     // 'catalogue/computers' => [
     //     'controller' => 'catalogue',

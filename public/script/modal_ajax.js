@@ -1,8 +1,8 @@
     //нажать посмотреть товар
-    $('.showProduct').on('click', function() {
+    $('.tovar').on('click','.showProduct', function() {
         // $('.alert-msg').removeAttr('hidden');
         const productId = $(this).data('index');
-        // console.log(productId);
+        console.log(productId);
 
         $.ajax({
             method: "POST",
@@ -21,6 +21,7 @@
                 alert('Error!');
             } else {
                 const products = JSON.parse(resp);
+                // console.log(productId);
                 console.log(products);
                 // console.log(products['id_product']);
                 $('.modal-name-product').text(products[0]['name']);
