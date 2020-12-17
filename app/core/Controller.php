@@ -28,7 +28,6 @@ abstract class Controller
             session_unset();
             // header('location: ' . $_SERVER['REDIRECT_URL']);
             header('location: ' . '/');
-            //change
             // die();
         }
         // //регистрация - старая врсия
