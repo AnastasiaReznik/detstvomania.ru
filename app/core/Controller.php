@@ -25,9 +25,9 @@ abstract class Controller
 
         //выход из профиля
         if (isset($_GET['do']) and $_GET['do'] == 'exit') {
-            session_unset('do');
-            header('location: ' . $_SERVER['REDIRECT_URL']);
-            // header('location: ' . '/');
+            session_unset();
+            // header('location: ' . $_SERVER['REDIRECT_URL']);
+            header('location: ' . '/');
             // die();
         }
         // //регистрация - старая врсия

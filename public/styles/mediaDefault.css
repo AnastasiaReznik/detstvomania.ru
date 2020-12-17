@@ -26,9 +26,7 @@
       div.tovar .card {
     width: 250px;
   }
-  .card-sale {
-    /* width: 100px; */
-  }
+  
     }
 
     /* sm-размер (<=768px) */
@@ -44,9 +42,7 @@
         width: 350px;
         font-size: 20px;
       }
-      .card-sale {
-        /* width: 100px; */
-      }
+      
     }
 
     /* xs-размер (<=575px) */
